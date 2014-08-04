@@ -26,12 +26,10 @@ namespace follow
             var message = new MailMessage("bet.frankfurt.newsletter@gmail.com", "yuvon2@gmail.com")
                         {
                             Subject = "ip",
-                            Body =(HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"]
+                            Body =HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"]
                         };
                         c.Send(message);
                     }
             
         }
     }
-}
-}
