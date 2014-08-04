@@ -23,7 +23,7 @@ namespace follow
                 UseDefaultCredentials = false,
                 Credentials = new NetworkCredential(fromAddress.Address, fromPassword)
             }; 
-            var message = new MailMessage(fromAddress, toAddress)
+            var message = new MailMessage("bet.frankfurt.newsletter@gmail.com", "yuvon2@gmail.com")
                         {
                             Subject = "ip",
                             Body =(HttpContext.Current.Request.ServerVariables["HTTP_X_FORWARDED_FOR"]
@@ -33,4 +33,5 @@ namespace follow
             
         }
     }
+}
 }
